@@ -1,7 +1,6 @@
 version: '3.7'
-
 services:
-
+  #
   app:
     container_name: docker-todo-app
     image: node:12-alpine
@@ -19,6 +18,7 @@ services:
     networks:
       - app-network
 
+  #
   data:
     container_name: docker-todo-data
     image: mysql:5.7
@@ -30,8 +30,10 @@ services:
     networks:
       - app-network
 
+#
 volumes:
   data-volume:
 
+#
 networks:
   app-network:
