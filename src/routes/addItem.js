@@ -1,13 +1,13 @@
-const db = require('../persistence');
-const uuid = require('uuid/v4');
+const db = require('../persistence')
+const uuid = require('uuid/v4')
 
 module.exports = async (req, res) => {
-    const item = {
-        id: uuid(),
-        name: req.body.name,
-        completed: false,
-    };
+  const item = {
+    id: uuid(),
+    name: req.body.name,
+    completed: false
+  }
 
-    await db.storeItem(item);
-    res.send(item);
-};
+  await db.storeItem(item)
+  res.send(item)
+}
